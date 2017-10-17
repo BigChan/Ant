@@ -25,7 +25,7 @@ public class UserController {
 
     @RequestMapping("/login")
     @ResponseBody
-    public String homePage(@RequestParam("username") String username, @RequestParam("password") String password) {
+    public String login(@RequestParam("username") String username, @RequestParam("password") String password) {
         User user = userService.getUserByUsernameAndPassword(username, password);
         if (user == null) {
             return "UnCorrect";
