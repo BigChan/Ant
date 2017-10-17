@@ -1,3 +1,4 @@
+var sign = location.search.split('=')[1]
 function check_login(){
     var name=$("#user_name").val();
     var pass=$("#password").val();
@@ -74,6 +75,13 @@ function check_login(){
   })                 
 
 //   登录注册切换
+if(sign == 0){
+  $('form').animate({
+    height: 'toggle',
+    opacity: 'toggle'
+}, 'slow');
+document.title = document.title =='码蚁——登录'?'码蚁——注册':'码蚁——登录';
+}
   $('.message a').click(function () {
     $('form').animate({
         height: 'toggle',
