@@ -1,0 +1,48 @@
+.header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 60px;
+	background-color: #fff;
+	border-bottom: 1px solid #ccc;
+	color: #4CAF50;
+	z-index: 100;
+}
+.container{position: relative;}
+.title{position: absolute;left: 0;width: 15%;}
+.title p{margin:10px 0 0 15px;font-size: 28px;}
+
+.middle{position: absolute;left: 15%;width: 55%;}
+.middle p{font-size: 20px;width: 15%;position: absolute;top: 15px}
+.middle input{
+	border-radius: 20px;
+	border:none;
+	background-color: #e6e6fa;
+	position: absolute;
+	left: 15%;
+	top: 15px;
+	padding-left: 10px;
+	color: #4CAF50;
+}
+.middle img{position: absolute;width: 15px;height: 15px;left: 36%;top: 22px;}
+.tail{position: absolute;left: 70%;width: 30%;text-align: center;font-size: 18px;}
+.tail .skin,.tail .login,.tail .register,.tail .write{position: absolute;width: 15%;margin-top: 18px}
+.tail .login{left: 18%}
+.tail .register, .tail .write{
+	border-radius:20px;
+	border:1px solid #4CAF50;
+	padding: 5px;
+	margin-top: 13px;
+}
+.tail .register{width: 20%;left: 40%}
+.tail .write{width: 25%;left: 65%;background-color: #4CAF50;color: #fff;}
+
+.swiperBox{
+	margin-top: 65px;
+	width: 60%;
+	margin-left: 20%;
+	height:300px;
+}
+.swiperBox .swiper-container{width: 100%;height: 100%;border-radius: 10px}
+.swiperBox .swiper-container img{width: 100%;height: 100%}

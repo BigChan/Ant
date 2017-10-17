@@ -1,0 +1,16 @@
+*{margin: 0;padding: 0;-webkit-box-sizing: border-box;box-sizing: border-box;}
+html,body{height: 100%;width: 100%}
+
+@font-face {
+	font-family: 'childGardenFont';
+	src: url('../font/w5-webfont.TTF') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */font-size: 15px; opacity:1;text-align: left;padding-left: 10px}
+::-moz-placeholder { /* Mozilla Firefox 19+ */font-size: 15px;opacity:1;text-align: left;padding-left: 10px}
+input:-ms-input-placeholder{font-size: 15px;opacity:1;text-align: left;padding-left: 10px}
+input::-webkit-input-placeholder{font-size: 15px;opacity:1;text-align: left;padding-left: 10px}
+a{background: transparent; text-decoration: none; -webkit-tap-highlight-color: transparent;color: #4CAF50}
+a:active{background: transparent;}
