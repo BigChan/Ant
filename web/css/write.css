@@ -1,0 +1,25 @@
+.editor{
+	width: 85%;
+	margin-left: 7.5%;
+	margin-top: 80px;
+}
+.editor p{margin-bottom: 20px;}
+.header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 60px;
+	background-color: #4CAF50;
+	border-bottom: 1px solid #ccc;
+	color: #fff;
+	z-index: 100;
+}
+.container{position: relative;}
+.title{position: absolute;left: 0;width: 15%;}
+.title p{margin:10px 0 0 15px;font-size: 28px;color: #fff}
+.mid-title{text-align: center;line-height: 60px;font-size: 26px;letter-spacing: 10px}
+.userMsg{position: absolute;left: 80%;top:10px;font-size: 16px;}
+.userMsg .headimg{border-radius: 100%;width: 45px;height: 45px;}
+.userMsg .headimg img{width: 100%;height: 100%;}
+.userMsg p{font-size: 14px;position: absolute;top: 20px;left: 60px;width: 100%}

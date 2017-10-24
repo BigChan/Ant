@@ -46,3 +46,28 @@
 }
 .swiperBox .swiper-container{width: 100%;height: 100%;border-radius: 10px}
 .swiperBox .swiper-container img{width: 100%;height: 100%}
+.skin:hover{cursor: pointer;}
+.skinList{width: 300px;height: 100px;position: absolute;top: 40px;left:-250px;background-color: #C4E1FF;padding-top: 10px}
+.skinList:before, .skinList:after{
+	position: absolute;
+    top: -10px;
+    left: 86%;
+    content: "";
+    display: inline-block;
+    border: 20px solid transparent;
+    border-top: none;
+    z-index: 101
+}
+.skinList:after{top: -15px;border-bottom: 30px solid #C4E1FF}
+.skinList ul{margin-top: 10px;}
+.skinList ul li{float: left;margin-left: 47.5px;font-size: 14px;text-align: center;}
+.skinList ul li span{margin-left: -12.5px}
+.circle{
+	border-radius: 100%;
+	width: 20px;
+	height: 20px;
+	background-color: #fff
+}
+.white-bg{background-color: #fff}
+.dark-bg{background-color: #3f3f3f}
+.green-bg{background-color:#79FF79}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ant</title>
+    <title>码蚁 - 汇聚文字的力量</title>
     <link rel="stylesheet" type="text/css" href="../css/idangous.css">
     <link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="../css/index.css">
@@ -24,15 +24,25 @@
 			<div class="tail">
 				<div class="skin">
 					皮肤
+					<div class="skinList" style="display: none;">
+						<div class="changBg">
+							您的个性，由您定义
+							<ul>
+								<li><div class="circle white-bg"></div><span style="color: #fff">纯白无暇</span></li>
+								<li><div class="circle dark-bg"></div><span style="color: #3f3f3f">月黑风高</span></li>
+								<li><div class="circle green-bg"></div><span style="color: #53FF53">原谅色！</span></li>
+							</ul>
+						</div>
+					</div>
 				</div>
 				<div class="login">
-					<a href="login.html">登录</a>
+					<a href="login.html?sign=1">登录</a>
 				</div>
 				<div class="register">
-					<a href="register.html">注册</a>
+					<a href="login.html?sign=0">注册</a>
 				</div>
 				<div class="write">
-					<a href="" style="color: #fff">写文章</a>
+					<a href="write.html" style="color: #fff">写文章</a>
 				</div>
 			</div>
 		</div>
@@ -67,6 +77,10 @@
 		loop:true,
         paginationClickable: true
     });
+
+    $('.skin').on('click',function(){
+    	$('.skinList').fadeToggle()
+    })
 </script>
 </body>
 </html>

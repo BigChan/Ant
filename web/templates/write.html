@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>码蚁 - 汇聚文字的力量</title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <link rel="stylesheet" type="text/css" href="../css/write.css">
+    <script type="text/javascript" src="../js/ckeditor/ckeditor.js"></script>
+</head>
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="title">
+				<a href="index.html"><p>码蚁</p></a>
+			</div>
+			<div class="mid-title">
+				码您所意
+			</div>
+			<div class="userMsg">
+				<div class="headimg">
+					<img src="../img/headimg.png" alt="头像" title="用户头像">
+				</div>
+				<p>userName</p>
+			</div>
+		</div>
+	</header>
+	<div class="editor">
+		<p><a href="#">等级：</a><span>工蚁(等级高者可获得更多操作功能)</span></p>
+		<textarea id="my-editor" cols="20" rows="10" class="ckeditor"></textarea>
+	</div>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript">
+		CKEDITOR.replace('my-editor')
+	</script>
+</body>
+</html>
