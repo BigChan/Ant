@@ -1,7 +1,7 @@
 package com.ant.test;
 
-import com.ant.dao.UserDao;
 import com.ant.entity.User;
+import com.ant.service.UserService;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -11,12 +11,14 @@ import org.springframework.beans.factory.annotation.Autowired;
  */
 
 public class UserTest extends BaseTest {
+
     @Autowired
-    private UserDao userDao;
+    private UserService userService;
 
     @Test
     public void testWhetherUserExists() throws Exception {
-        User user = userDao.getUserByUsernameAndPassword("ant", "a");
-        System.out.println(user != null ? "Exists" : "Not Exists");
+        User user = userService.getUserByUsernameAndPassword("ant", "ant");
+        assert user != null;
     }
+
 }

@@ -28,9 +28,9 @@ public class UserController {
     public String login(@RequestParam("username") String username, @RequestParam("password") String password) {
         User user = userService.getUserByUsernameAndPassword(username, password);
         if (user == null) {
-            return "UnCorrect";
+            return "fail";
         } else {
-            return "correct";
+            return "success";
         }
     }
 
