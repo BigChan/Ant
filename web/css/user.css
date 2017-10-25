@@ -1,0 +1,92 @@
+.user_center{
+    width: 60%;
+    margin: 85px auto 0;
+}
+.user_center .left_part{
+    list-style: none;
+    position: fixed;
+    width: 20%;
+    color:#2f2f2f;
+    font-size: 15px;
+}
+.user_center .left_part li{
+    padding: 15px;
+    cursor: pointer;
+}
+.user_center .left_part li.active,.user_center .left_part li:hover{
+background-color: #f0f0f0;
+border-radius: 4px;
+}
+.user_center .right_part{
+    margin-left: 40%;
+}
+.user_center .right_part img{
+    width:5rem; 
+    height:5rem;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+}
+.user_center .right_part table{
+    width: 100%;
+}
+.user_center .right_part table{
+    display: none;
+}
+.user_center .right_part table.active{
+    display: table;
+}
+.user_center .right_part .base_setting td>label{
+border: 1px solid #4CAF50;
+color: #4CAF50;
+border-radius: 40px;
+padding: 4px 12px;
+cursor: pointer;
+}
+.user_center .right_part .base_setting td>label:hover{
+    border: 1px solid #42c02e;
+    color: #42c02e!important;
+    background-color: rgba(59,194,29,.05);
+}
+.user_center .right_part input[type="text"],.user_center .right_part textarea{
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 15px;
+    border: 1px solid #c8c8c8;
+    border-radius: 4px;
+    background-color: hsla(0,0%,71%,.1);
+    outline: none;
+}
+.user_center .right_part textarea{
+    resize: none;
+    height: 100px;
+}
+.user_center .right_part td:nth-of-type(1){
+    width: 30%;
+    font-size: 15px;
+    color: #969696;
+}
+.user_center .right_part .setting_save{
+    width: 100px;
+    margin: 30px 0 60px;
+    border-radius: 20px;
+    border: none;
+    background-color: #3db922;
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+}
+.user_center .right_part .setting_save:hover{
+    background-color: #32BC37;
+}
+.user_center .right_part .information td>label{
+    color: #333;
+    padding-right:20px;
+}
+.user_center .right_part td{
+    padding: 20px 0;
+}
+.user_center .right_part tr:first-child td{
+    padding-top: 0;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用户中心</title>
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <link rel="stylesheet" type="text/css" href="../css/user.css">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>    
+</head>
+<body>
+    <header class="header">
+		<div class="container">
+			<div class="title">
+				<p>码蚁</p>
+			</div>
+			<div class="middle">
+				<p class="index-page"><a href="index.html">首页</a></p>
+				<input type="text" placeholder="搜索" style="width: 25%;height: 30px" />
+				<img src="../img/search.png" class="search">
+			</div>
+			<div class="tail">
+				<div class="skin">
+					皮肤
+				</div>
+				<div class="write">
+					<a href="" style="color: #fff">写文章</a>
+				</div>
+			</div>
+		</div>
+    </header>
+    <div class="user_center">
+        <ul class="left_part">
+            <li class="active">基础设置</li>
+            <li>个人资料</li>
+        </ul>
+        <div class="right_part">
+             <table class="active">
+                 <tbody class="base_setting">
+                    <tr>
+                        <td>
+                            <img src="../img/head.JPG">
+                        </td>
+                        <td>
+                            <label href="#">
+                            <input type="file" hidden />
+                            更改头像
+                            </lael>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>笔名</td>
+                        <td>
+                            <input type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>电子邮箱</td>
+                        <td>
+                            <input type="text" placeholder="请输入你常用的邮箱"/>                                
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                 </tbody>
+             </table>
+             <table>
+                    <tbody class="information">
+                       <tr>
+                           <td>
+                               性别
+                           </td>
+                           <td>
+                              <label><input type="radio" name="sex" />男</label>
+                              <label><input type="radio" name="sex" />女</label>
+                              <label><input type="radio" name="sex" />保密</label>
+                           </td>
+                       </tr>
+                       <tr>
+                           <td>个人简介</td>
+                           <td>
+                               <textarea placeholder="填写你的个人简介"></textarea>
+                           </td>
+                       </tr>
+                       <tr>
+                           <td>个人网站</td>
+                           <td>
+                               <input type="text" placeholder="http://你的网址"/>                                
+                           </td>
+                       </tr>
+                       <tr>
+                           <td></td>
+                           <td></td>
+                       </tr>
+                    </tbody>
+                </table>
+                <input type="submit" class="btn setting_save" value="保存">
+        </div>
+    </div>
+    <script src="../js/user.js"></script>        
+</body>
+</html>
