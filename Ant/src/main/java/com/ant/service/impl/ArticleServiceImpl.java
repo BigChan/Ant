@@ -22,7 +22,8 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Override
     public List<Article> getArticleByTitle(String title) {
-        List<Article> articleList = articleDao.getArticleByTitle(title);
+        //title = "%"+title+"%";
+        List<Article> articleList = articleDao.getArticleByTitle("%"+title+"%");
         return articleList;
     }
 

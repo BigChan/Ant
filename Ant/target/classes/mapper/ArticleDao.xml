@@ -6,7 +6,7 @@
 <!--目的：为dao接口方法提供sql语句配置-->
 <mapper namespace="com.ant.dao.ArticleDao">
     <select id="getArticleByTitle" resultType="com.ant.entity.Article">
-        SELECT * FROM article WHERE title = #{title}
+        SELECT * FROM article WHERE title LIKE #{title}
     </select>
     <select id="getArticleById" resultType="com.ant.entity.Article">
         SELECT * FROM article WHERE id = #{id}

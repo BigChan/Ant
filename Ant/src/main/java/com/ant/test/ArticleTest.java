@@ -25,7 +25,7 @@ public class ArticleTest extends BaseTest {
     @Test
     public void testGetByTitle() throws Exception {
         ArticleController articleController = getArticleController();
-        List<Article> articleList = articleController.getArticleByTitle("构建之法");
+        List<Article> articleList = articleController.getArticleByTitle("构");
         if(articleList.size()==0){
             System.out.println("找不到数据");
         }else {
