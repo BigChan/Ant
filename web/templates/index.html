@@ -4,9 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Doc</title>
+    <title>码蚁——随时随地分享</title>
 </head>
 <body>
+    
+    <title>Ant</title>
+    <link rel="stylesheet" type="text/css" href="../css/idangous.css">
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+</head>
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="title">
+				<p>码蚁</p>
+			</div>
+			<div class="middle">
+				<p class="index-page"><a href="index.html">首页</a></p>
+				<input type="text" placeholder="搜索" style="width: 25%;height: 30px" />
+				<img src="../img/search.png" class="search">
+			</div>
+			<div class="tail">
+				<div class="skin">
+					皮肤
+				</div>
+				<div class="login">
+					<a href="login.html?sign=1">登录</a>
+				</div>
+				<div class="register">
+					<a href="login.html?sign=0">注册</a>
+				</div>
+				<div class="write">
+					<a href="" style="color: #fff">写文章</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!--轮播图-->
+	<div class="swiperBox">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+			    <div class="swiper-slide">
+			        <a href="#"><img src="../img/swiper2.jpg" alt="banner2"></a>
+			    </div>
+			    <div class="swiper-slide">
+			        <a href="#"><img src="../img/swiper1.jpg" alt="banner2"></a>
+			    </div>
+			    <div class="swiper-slide">
+			        <a href="#"><img src="../img/swiper3.jpg" alt="banner2"></a>
+			    </div>
+			    <div class="swiper-slide">
+			        <a href="#"><img src="../img/swiper4.jpg" alt="banner2"></a>
+			    </div>
+			</div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination swiper-pagination-white"></div>
+		</div>
+	</div>
+<script type="text/javascript" src="../js/swiper.min.js"></script>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript">
+	var swiper_news = new Swiper('.swiperBox .swiper-container', {
+        pagination: '.swiperBox .swiper-pagination',
+		autoplay: 3000,
+		loop:true,
+        paginationClickable: true
+    });
+</script>
 
 </body>
 </html>
