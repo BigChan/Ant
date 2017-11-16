@@ -8,4 +8,10 @@
     <select id="getUserByUsernameAndPassword" resultType="User">
         SELECT * FROM user WHERE username = #{username} AND password = #{password}
     </select>
+    <select id="getUsername" resultType="String">
+        SELECT user.username FROM user WHERE username = #{username}
+    </select>
+    <insert id="saveUser">
+        INSERT INTO user VALUES (NULL ,#{username},#{password},#{email})
+    </insert>
 </mapper>
