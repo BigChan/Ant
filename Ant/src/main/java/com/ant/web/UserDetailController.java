@@ -27,8 +27,9 @@ public class UserDetailController {
     @RequestMapping("/saveUserDetail")
     @ResponseBody
     public String saveUserDetail(@RequestParam("id")int id,@RequestParam("name") String name,
-                                 @RequestParam("image") String image, @RequestParam("introduction") String introduction) {
-        boolean isTrue = userDetailService.saveUserDetail(id,name,image,introduction);
+                                 @RequestParam("image") String image, @RequestParam("introduction") String introduction,
+                                 @RequestParam("sex") char sex, @RequestParam("net") String net) {
+        boolean isTrue = userDetailService.saveUserDetail(id,name,image,introduction,sex,net);
         String returnString = "插入失败";
         if(isTrue){returnString = "插入成功";}
         return returnString;
@@ -46,8 +47,9 @@ public class UserDetailController {
     @RequestMapping("/updateUserDetail")
     @ResponseBody
     public String updateUserDetail(@RequestParam("id") int id,@RequestParam("name") String name,
-                                   @RequestParam("image") String image, @RequestParam("introduction") String introduction){
-        boolean isTrue = userDetailService.updateUserDetail(id,name,image,introduction);
+                                   @RequestParam("image") String image, @RequestParam("introduction") String introduction,
+                                   @RequestParam("sex") char sex, @RequestParam("net") String net){
+        boolean isTrue = userDetailService.updateUserDetail(id,name,image,introduction,sex,net);
         String returnString = "更新失败";
         if(isTrue){
             returnString = "更新成功";

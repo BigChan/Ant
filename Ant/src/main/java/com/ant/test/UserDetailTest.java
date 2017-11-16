@@ -16,25 +16,25 @@ public class UserDetailTest extends BaseTest{
     @Test
     public void testGetUserDetailById() throws Exception{
         UserDetailController userDetailController = getUserDetailController();
-        UserDetail userDetail = userDetailController.getUserDetailById(1);
+        UserDetail userDetail = userDetailController.getUserDetailById(5);
         if (userDetail==null) {
             System.out.println("找不到数据");
         }else{
-            System.out.println(userDetail.getId()+"\t"+userDetail.getName()+"\t"+userDetail.getImage()+"\t"+userDetail.getIntroduction());
+            System.out.println(userDetail.getId()+"\t"+userDetail.getName()+"\t"+userDetail.getImage()+"\t"+userDetail.getIntroduction()+"\t"+userDetail.getSex()+"\t"+userDetail.getNet());
         }
     }
 
     @Test
     public void testSaveUserDetail() throws Exception{
         UserDetailController userDetailController = getUserDetailController();
-        String result = userDetailController.saveUserDetail(4,"武松","D://zhaoyun.jpg","武松打虎");
+        String result = userDetailController.saveUserDetail(5,"武松","D://zhaoyun.jpg","武松打虎",'0',"http://www.abc.com");
         System.out.println(result);
     }
 
     @Test
     public void testUpdateUserDetail() throws Exception{
         UserDetailController userDetailController = getUserDetailController();
-        String result = userDetailController.updateUserDetail(1,"赵云",null,"常山赵子龙在此");
+        String result = userDetailController.updateUserDetail(1,"赵云",null,"常山赵子龙在此",'0',"http://efg.com");
         System.out.println(result);
     }
 

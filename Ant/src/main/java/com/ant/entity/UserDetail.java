@@ -5,6 +5,16 @@ public class UserDetail {
     private String name;
     private String image;
     private String introduction;
+    private char sex;
+    private String net;
+
+    public String getNet() {return net;}
+
+    public void setNet(String net) {this.net = net; }
+
+    public char getSex() {return sex;}
+
+    public void setSex(char sex) {this.sex = sex; }
 
     public int getId() {return id;  }
 

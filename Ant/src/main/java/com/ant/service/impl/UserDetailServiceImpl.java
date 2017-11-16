@@ -30,22 +30,22 @@ public class UserDetailServiceImpl implements UserDetailService {
     }
 
     @Override
-    public boolean updateUserDetail(int id, String name, String image, String introduction) {
+    public boolean updateUserDetail(int id, String name, String image, String introduction,char sex,String net) {
         UserDetail userDetail = userDetailDao.getUserDetailById(id);
         boolean isTrue = false;
         if(userDetail!=null){
-            userDetailDao.updateUserDetail(id,name,image,introduction);
+            userDetailDao.updateUserDetail(id,name,image,introduction,sex,net);
             isTrue = true;
         }
         return isTrue;
     }
 
     @Override
-    public boolean saveUserDetail(int id,String name, String image, String introduction) {
+    public boolean saveUserDetail(int id,String name, String image, String introduction,char sex,String net) {
         UserDetail userDetail = userDetailDao.getUserDetailById(id);
         boolean isTrue = false;
         if(userDetail==null) {
-            userDetailDao.saveUserDetail(id, name, image, introduction);
+            userDetailDao.saveUserDetail(id, name, image, introduction,sex,net);
             isTrue = true;
         }
         return isTrue;

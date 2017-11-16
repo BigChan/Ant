@@ -9,12 +9,12 @@
         SELECT * FROM userdetail WHERE id = #{id}
     </select>
     <insert id="saveUserDetail">
-        INSERT INTO userdetail VALUES (#{id},#{name},#{image},#{introduction})
+        INSERT INTO userdetail VALUES (#{id},#{name},#{image},#{introduction},#{sex},#{net})
     </insert>
     <delete id="deleteUserDetailById">
         DELETE FROM userdetail where id = #{id}
     </delete>
     <update id="updateUserDetail">
-        UPDATE userdetail SET name =#{name},image = #{image},introduction = #{introduction} WHERE id = #{id}
+        UPDATE userdetail SET name =#{name},image = #{image},introduction = #{introduction},sex = #{sex},net = #{net} WHERE id = #{id}
     </update>
 </mapper>
