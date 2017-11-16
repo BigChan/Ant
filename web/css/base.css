@@ -12,6 +12,21 @@ html,body{height: 100%;width: 100%}
 ::-moz-placeholder { /* Mozilla Firefox 19+ */font-size: 15px;opacity:1;text-align: left;padding-left: 10px}
 input:-ms-input-placeholder{font-size: 15px;opacity:1;text-align: left;padding-left: 10px}
 input::-webkit-input-placeholder{font-size: 15px;opacity:1;text-align: left;padding-left: 10px}
-a{background: transparent; text-decoration: none; -webkit-tap-highlight-color: transparent;color: #4CAF50}
+a{background: transparent; text-decoration: none; -webkit-tap-highlight-color: transparent;color: inherit;}
 a:active{background: transparent;}
 ul li{list-style: none}
+input{outline: none;}
+
+
+.whiteBg{
+	background-color: #fff;
+	color: #4CAF50;
+}
+.blackBg{
+	background-color:#3f3f3f;
+	color: #ccc;
+}
+.greyBg{
+	background-color: #95a5a6;
+	color: #fff;
+}

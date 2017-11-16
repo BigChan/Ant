@@ -1,18 +1,18 @@
+/* 头部导航条样式 */
 .header{
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 60px;
-	background-color: #fff;
+	background-color: inherit;
 	border-bottom: 1px solid #ccc;
-	color: #4CAF50;
+	color: inherit;
 	z-index: 100;
 }
 .container{position: relative;}
 .title{position: absolute;left: 0;width: 15%;}
 .title p{margin:10px 0 0 15px;font-size: 28px;}
-
 .middle{position: absolute;left: 15%;width: 55%;}
 .middle p{font-size: 20px;width: 15%;position: absolute;top: 15px}
 .middle input{
@@ -23,7 +23,7 @@
 	left: 15%;
 	top: 15px;
 	padding-left: 10px;
-	color: #4CAF50;
+	/*color: #4CAF50;*/
 }
 .middle img{position: absolute;width: 15px;height: 15px;left: 36%;top: 22px;}
 .tail{position: absolute;left: 70%;width: 30%;text-align: center;font-size: 18px;}
@@ -38,6 +38,7 @@
 .tail .register{width: 20%;left: 40%}
 .tail .write{width: 25%;left: 65%;background-color: #4CAF50;color: #fff;}
 
+/* 轮播图样式 */
 .swiperBox{
 	margin-top: 65px;
 	width: 60%;
@@ -46,6 +47,8 @@
 }
 .swiperBox .swiper-container{width: 100%;height: 100%;border-radius: 10px}
 .swiperBox .swiper-container img{width: 100%;height: 100%}
+
+/* 换肤 */
 .skin:hover{cursor: pointer;}
 .skinList{width: 300px;height: 100px;position: absolute;top: 40px;left:-250px;background-color: #C4E1FF;padding-top: 10px}
 .skinList:before, .skinList:after{
@@ -70,4 +73,9 @@
 }
 .white-bg{background-color: #fff}
 .dark-bg{background-color: #3f3f3f}
-.green-bg{background-color:#79FF79}
+.grey-bg{background-color:#95a5a6}
+
+/* 列表样式 */
+.list-box{
+	
+}

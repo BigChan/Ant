@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../css/index.css">
     <link rel="stylesheet" type="text/css" href="../css/base.css">
 </head>
-<body>
+<body class="whiteBg">
 	<header class="header">
 		<div class="container">
 			<div class="title">
@@ -28,9 +28,15 @@
 						<div class="changBg">
 							您的个性，由您定义
 							<ul>
-								<li><div class="circle white-bg"></div><span style="color: #fff">纯白无暇</span></li>
-								<li><div class="circle dark-bg"></div><span style="color: #3f3f3f">月黑风高</span></li>
-								<li><div class="circle green-bg"></div><span style="color: #53FF53">原谅色！</span></li>
+								<li>
+									<div class="circle white-bg" onclick="changeBg(0)"></div><span style="color: #fff">梅花白</span>
+								</li>
+								<li>
+									<div class="circle dark-bg" onclick="changeBg(1)"></div><span style="color: #3f3f3f">星辰黑</span>
+								</li>
+								<li>
+									<div class="circle grey-bg" onclick="changeBg(2)"></div><span style="color: #95a5a6">月岩灰</span>
+								</li>
 							</ul>
 						</div>
 					</div>
@@ -47,25 +53,41 @@
 			</div>
 		</div>
 	</header>
-	<!--轮播图-->
-	<div class="swiperBox">
-		<div class="swiper-container">
-			<div class="swiper-wrapper">
-			    <div class="swiper-slide">
-			        <a href="#"><img src="../img/swiper2.jpg" alt="banner2"></a>
-			    </div>
-			    <div class="swiper-slide">
-			        <a href="#"><img src="../img/swiper1.jpg" alt="banner2"></a>
-			    </div>
-			    <div class="swiper-slide">
-			        <a href="#"><img src="../img/swiper3.jpg" alt="banner2"></a>
-			    </div>
-			    <div class="swiper-slide">
-			        <a href="#"><img src="../img/swiper4.jpg" alt="banner2"></a>
-			    </div>
+	<div class="container">
+		<!--轮播图-->
+		<div class="swiperBox">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+				    <div class="swiper-slide">
+				        <a href="#"><img src="../img/swiper2.jpg" alt="banner2"></a>
+				    </div>
+				    <div class="swiper-slide">
+				        <a href="#"><img src="../img/swiper1.jpg" alt="banner2"></a>
+				    </div>
+				    <div class="swiper-slide">
+				        <a href="#"><img src="../img/swiper3.jpg" alt="banner2"></a>
+				    </div>
+				    <div class="swiper-slide">
+				        <a href="#"><img src="../img/swiper4.jpg" alt="banner2"></a>
+				    </div>
+				</div>
+				<!-- Add Pagination -->
+				<div class="swiper-pagination swiper-pagination-white"></div>
 			</div>
-			<!-- Add Pagination -->
-			<div class="swiper-pagination swiper-pagination-white"></div>
+		</div>
+		<!-- 文章列表 -->
+		<div class="list-container">
+			<ul class="list-wrap">
+				<li class="list-box">
+					<a href=""><img src="" class="list-img" /></a>
+					<div class="content">
+						<div class="author"></div>
+						<div class="title"></div>
+						<div class="abstract"></div>
+						<div class="bottom"></div>
+					</div>
+				</li>
+			</ul>
 		</div>
 	</div>
 <script type="text/javascript" src="../js/swiper.min.js"></script>
@@ -81,6 +103,19 @@
     $('.skin').on('click',function(){
     	$('.skinList').fadeToggle()
     })
+    //修改背景色
+    function changeBg(type){
+    	if(type == 0){//白色，默认
+    		$('body').removeClass()
+    		$('body').addClass('whiteBg')
+    	} else if(type == 1){//黑色
+    		$('body').removeClass()
+    		$('body').addClass('blackBg')
+    	} else if(type == 2){//灰色
+    		$('body').removeClass()
+    		$('body').addClass('greyBg')
+    	}
+    }
 </script>
 </body>
 </html>
