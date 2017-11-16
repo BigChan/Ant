@@ -53,18 +53,14 @@
                     <tr>
                         <td>笔名</td>
                         <td>
-                            <input type="text" />
+                            <input type="text" id="penName"/>
                         </td>
                     </tr>
                     <tr>
                         <td>电子邮箱</td>
                         <td>
-                            <input type="text" placeholder="请输入你常用的邮箱"/>                                
+                            <input type="text" placeholder="请输入你常用的邮箱" id="mail"/>                                
                         </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
                     </tr>
                  </tbody>
              </table>
@@ -75,26 +71,22 @@
                                性别
                            </td>
                            <td>
-                              <label><input type="radio" name="sex" />男</label>
-                              <label><input type="radio" name="sex" />女</label>
-                              <label><input type="radio" name="sex" />保密</label>
+                              <label><input type="radio" name="sex" value='男'/>男</label>
+                              <label><input type="radio" name="sex" value='女'/>女</label>
+                              <label><input type="radio" name="sex" value='保密'/>保密</label>
                            </td>
                        </tr>
                        <tr>
                            <td>个人简介</td>
                            <td>
-                               <textarea placeholder="填写你的个人简介"></textarea>
+                               <textarea placeholder="填写你的个人简介" id="description"></textarea>
                            </td>
                        </tr>
                        <tr>
                            <td>个人网站</td>
                            <td>
-                               <input type="text" placeholder="http://你的网址"/>                                
+                               <input type="text" placeholder="http://你的网址" id="site"/>                                
                            </td>
-                       </tr>
-                       <tr>
-                           <td></td>
-                           <td></td>
                        </tr>
                     </tbody>
                 </table>
