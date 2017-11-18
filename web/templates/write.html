@@ -27,17 +27,32 @@
 		</div>
 	</header>
 	<div class="editor">
-		<input type="text" name="article-title" placeholder="请输入文章题目(16个字以内)" maxlength="16">
+		<input type="text" name="article-title" placeholder="请输入文章题目(16个字以内)" maxlength="16"  id="article-title">
 		<button type="button" onclick="submit()" class="submitBtn">提交</button>
-		<form>
+		<form id="form1">
 			<textarea id="my-editor" cols="20" rows="10" class="ckeditor"></textarea>
 		</form>
 	</div>
 	<script type="text/javascript" src="../js/jquery.min.js"></script>
 	<script type="text/javascript">
-		CKEDITOR.replace('my-editor')
-		function submit(){
-			//
+		var editor = CKEDITOR.replace('my-editor',{toolbar:'Basic'});
+		// CKFinder.setupCKEditor(editor, "ckfinder/"); //设置图片管理组件
+		//处理CKeditor的值
+		function CKupdate() {
+            for (instance in CKEDITOR.instances){
+                CKEDITOR.instances[instance].updateElement();
+            }
+        }
+        //提交表单
+        function submit(){
+			CKupdate();
+			$.post('/',$('#form1').serialize(),function(data){
+				if(data == 'success'){
+					console.log('成功发送')
+				} else{
+					console.log('失败')
+				}
+			})
 		}
 	</script>
 </body>
