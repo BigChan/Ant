@@ -2,6 +2,9 @@ package com.ant.web;
 
 import com.ant.entity.Article;
 import com.ant.service.ArticleService;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.util.JSONPObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,7 +12,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -26,14 +31,31 @@ public class ArticleController {
 
     @RequestMapping("/getArticleByTitle")
     @ResponseBody
-    public List<Article> getArticleByTitle(@RequestParam("title") String title) {
+    public String getArticleByTitle(@RequestParam("title") String title) {
         List<Article> articleList = articleService.getArticleByTitle(title);
-        return articleList;
+        String summary = null;
+        Map map = new HashMap();
+        for (Article a:articleList) {
+            if(a.getContent().length()<50)
+                summary = a.getContent().substring(0, a.getContent().length());
+            else
+                summary = a.getContent().substring(0, 50);
+            a.setSummary(summary);
+            map.put("id",a.getId());
+            map.put("userId",a.getUserId());
+            map.put("viewed",a.getViewed());
+            map.put("createDate",a.getCreateDate());
+            map.put("title",a.getTitle());
+            map.put("content",a.getContent());
+            map.put("summary",a.getSummary());
+        }
+
+         return ;
     }
 
     @RequestMapping("/getArticleById")
     @ResponseBody
-    public Article getArticleById(@RequestParam("id") int id) {
+    public String getArticleById(@RequestParam("id") int id) {
         Article article = articleService.getArticleById(id);
         return article;
     }
