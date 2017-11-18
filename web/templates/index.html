@@ -41,11 +41,27 @@
 						</div>
 					</div>
 				</div>
-				<div class="login">
-					<a href="login.html?sign=1">登录</a>
+				<div id="LognReg">
+					<div class="login">
+						<a href="login.html?sign=1">登录</a>
+					</div>
+					<div class="register">
+						<a href="login.html?sign=0">注册</a>
+					</div>
 				</div>
-				<div class="register">
-					<a href="login.html?sign=0">注册</a>
+				<div class="userMsg" style="display: none;">
+					<div class="headimg">
+						<img src="../img/headimg.png" alt="头像" title="用户头像">
+					</div>
+					<p>userName</p>
+					<ul class="dropdown-menu" style="display: none;">
+						<li>
+							<a href="user.html">用户中心</a>
+						</li>
+						<li>
+							<a href="">退出登录</a>
+						</li>
+					</ul>
 				</div>
 				<div class="write">
 					<a href="write.html" style="color: #fff">写文章</a>
@@ -103,6 +119,9 @@
 
     $('.skin').on('click',function(){
     	$('.skinList').fadeToggle()
+    })
+    $('.headimg').on('click',function(){
+    	$('.dropdown-menu').fadeToggle()
     })
     //修改背景色
     function changeBg(type){
