@@ -4,15 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<<<<<<< HEAD
-    <title>码蚁——随时随地分享</title>
-</head>
-<body>
-    
-    <title>Ant</title>
-=======
     <title>码蚁 - 汇聚文字的力量</title>
->>>>>>> caishuhui_dev
     <link rel="stylesheet" type="text/css" href="../css/idangous.css">
     <link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="../css/index.css">
@@ -49,11 +41,27 @@
 						</div>
 					</div>
 				</div>
-				<div class="login">
-					<a href="login.html?sign=1">登录</a>
+				<div id="LognReg">
+					<div class="login">
+						<a href="login.html?sign=1">登录</a>
+					</div>
+					<div class="register">
+						<a href="login.html?sign=0">注册</a>
+					</div>
 				</div>
-				<div class="register">
-					<a href="login.html?sign=0">注册</a>
+				<div class="userMsg" style="display: none;">
+					<div class="headimg">
+						<img src="../img/headimg.png" alt="头像" title="用户头像">
+					</div>
+					<p>userName</p>
+					<ul class="dropdown-menu" style="display: none;">
+						<li>
+							<a href="user.html">用户中心</a>
+						</li>
+						<li>
+							<a href="">退出登录</a>
+						</li>
+					</ul>
 				</div>
 				<div class="write">
 					<a href="write.html" style="color: #fff">写文章</a>
@@ -100,6 +108,7 @@
 	</div>
 <script type="text/javascript" src="../js/swiper.min.js"></script>
 <script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>
 <script type="text/javascript">
 	var swiper_news = new Swiper('.swiperBox .swiper-container', {
         pagination: '.swiperBox .swiper-pagination',
@@ -110,6 +119,9 @@
 
     $('.skin').on('click',function(){
     	$('.skinList').fadeToggle()
+    })
+    $('.headimg').on('click',function(){
+    	$('.dropdown-menu').fadeToggle()
     })
     //修改背景色
     function changeBg(type){

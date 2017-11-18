@@ -49,9 +49,9 @@
 .swiperBox .swiper-container img{width: 100%;height: 100%}
 
 /* 换肤 */
-.skin:hover{cursor: pointer;}
+.skin:hover, .headimg:hover{cursor: pointer;}
 .skinList{width: 300px;height: 100px;position: absolute;top: 40px;left:-250px;background-color: #C4E1FF;padding-top: 10px}
-.skinList:before, .skinList:after{
+.skinList:before, .skinList:after, .dropdown-menu:before, .dropdown-menu:after{
 	position: absolute;
     top: -10px;
     left: 86%;
@@ -75,6 +75,24 @@
 .dark-bg{background-color: #3f3f3f}
 .grey-bg{background-color:#95a5a6}
 
+/* 登陆成功后头像样式 */
+.userMsg{position: absolute;left: 25%;top:10px;font-size: 16px;}
+.userMsg .headimg{border-radius: 100%;width: 45px;height: 45px;}
+.userMsg .headimg img{width: 100%;height: 100%;}
+.userMsg p{font-size: 14px;position: absolute;top: 20px;left: 60px;width: 100%}
+/* 下拉列表 */
+.dropdown-menu{
+	position: absolute;
+	z-index: 101;
+	top: 60px;
+	left: 0;
+	background-color: #C4E1FF;
+	width: 150px;
+}
+.dropdown-menu:after{top: -15px;border-bottom: 30px solid #C4E1FF;left: 0}
+.dropdown-menu li{
+	line-height: 30px;
+}
 /* 列表样式 */
 .list-box{
 	
