@@ -7,9 +7,9 @@ package com.ant.service;
 
 public interface UserService {
 
-    boolean isUsernameAndPasswordCorrect(String username, String password);
+    String loginUser(String username, String password);
 
-    boolean registerUser(String username, String password, String email);
+    String registerUser(String username, String password, String email);
 
     boolean isUserExists(String username);
 

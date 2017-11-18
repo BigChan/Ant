@@ -27,7 +27,7 @@ public class UserTest extends BaseTest {
     @Test
     public void testRegister() throws Exception {
         UserController userController = getUserController();
-        String result = userController.register("", "abc","ant@ant.com");
+        String result = userController.register("edf", "abc","ant@ant.com");
         assert result.equals("success");
     }
 

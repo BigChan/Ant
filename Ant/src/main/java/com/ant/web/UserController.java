@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 
 @Controller
+@RequestMapping(produces = "application/json;charset=UTF-8")
 public class UserController {
 
     private final UserService userService;
@@ -22,26 +23,16 @@ public class UserController {
         this.userService = userService;
     }
 
-    @RequestMapping("/login")
+    @RequestMapping(value = "/login")
     @ResponseBody
     public String login(@RequestParam("username") String username, @RequestParam("password") String password) {
-        boolean isCorrect = userService.isUsernameAndPasswordCorrect(username, password);
-        if (isCorrect) {
-            return "success";
-        } else {
-            return "fail";
-        }
+        return userService.loginUser(username, password);
     }
 
-    @RequestMapping("/register")
+    @RequestMapping(value = "/register")
     @ResponseBody
-    public String register(@RequestParam("username") String username, @RequestParam("password") String password, @RequestParam(value = "email",required = false) String email) {
-        boolean isRegister = userService.registerUser(username, password,email);
-        if (isRegister) {
-            return "success";
-        } else {
-            return "fail";
-        }
+    public String register(@RequestParam("username") String username, @RequestParam("password") String password, @RequestParam(value = "email", required = false) String email) {
+        return userService.registerUser(username, password, email);
     }
 
 

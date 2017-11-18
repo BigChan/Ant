@@ -3,6 +3,7 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
+
   <display-name>Archetype Created Web Application</display-name>
 
   <!-- 如果是用mvn命令生成的xml，需要修改servlet版本为3.1 -->
@@ -32,6 +33,15 @@
   </filter>
   <filter-mapping>
     <filter-name>encodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <filter>
+    <filter-name>accessFilter</filter-name>
+    <filter-class>com.ant.filter.AccessFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>accessFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
 
