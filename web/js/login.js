@@ -15,6 +15,7 @@ function check_login(){
                 $("#user_name").val("");
                 $("#password").val("");       
                 document.cookie = name;
+                console.log(document.cookie)
                  window.location.assign("index.html")
                }
             }
