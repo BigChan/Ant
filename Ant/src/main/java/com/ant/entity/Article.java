@@ -13,14 +13,6 @@ public class Article {
     private Date create_date;
     private String title;
     private String content;
-    private String  summary;
-
-    public String getSummary() {
-        return summary;
-    }
-    public void setSummary(String summary){
-        this.summary = summary;
-    }
 
     public int getId() {
         return id;

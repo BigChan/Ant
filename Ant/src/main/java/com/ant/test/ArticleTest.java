@@ -31,7 +31,7 @@ public class ArticleTest extends BaseTest {
         }else {
             for (Article article : articleList
                     ) {
-                System.out.println(article.getCreateDate() +"\t"+article.getTitle() + "\t" + article.getContent()+"\t"+article.getSummary());
+                System.out.println(article.getCreateDate() +"\t"+article.getTitle() + "\t" + article.getContent());
             }
         }
     }

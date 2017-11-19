@@ -31,31 +31,14 @@ public class ArticleController {
 
     @RequestMapping("/getArticleByTitle")
     @ResponseBody
-    public String getArticleByTitle(@RequestParam("title") String title) {
+    public List<Article> getArticleByTitle(@RequestParam("title") String title) {
         List<Article> articleList = articleService.getArticleByTitle(title);
-        String summary = null;
-        Map map = new HashMap();
-        for (Article a:articleList) {
-            if(a.getContent().length()<50)
-                summary = a.getContent().substring(0, a.getContent().length());
-            else
-                summary = a.getContent().substring(0, 50);
-            a.setSummary(summary);
-            map.put("id",a.getId());
-            map.put("userId",a.getUserId());
-            map.put("viewed",a.getViewed());
-            map.put("createDate",a.getCreateDate());
-            map.put("title",a.getTitle());
-            map.put("content",a.getContent());
-            map.put("summary",a.getSummary());
-        }
-
-         return ;
+         return articleList;
     }
 
     @RequestMapping("/getArticleById")
     @ResponseBody
-    public String getArticleById(@RequestParam("id") int id) {
+    public Article getArticleById(@RequestParam("id") int id) {
         Article article = articleService.getArticleById(id);
         return article;
     }

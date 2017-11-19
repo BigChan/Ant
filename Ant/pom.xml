@@ -16,12 +16,6 @@
       <version>4.11</version>
     </dependency>
 
-    <dependency>
-      <groupId>com.alibaba</groupId>
-      <artifactId>fastjson</artifactId>
-      <version>1.2.4</version>
-    </dependency>
-
     <!-- 1.数据库 -->
     <dependency>
       <groupId>mysql</groupId>
