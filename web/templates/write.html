@@ -22,23 +22,18 @@
 				<div class="headimg">
 					<img src="../img/headimg.png" alt="头像" title="用户头像">
 				</div>
-				<p>userName</p>
+				<p class="userName"></p>
 			</div>
 		</div>
 	</header>
 	<div class="editor">
-		<input type="text" name="article-title" placeholder="请输入文章题目(16个字以内)" maxlength="16">
+		<input id="article_title" type="text" name="article_title" placeholder="请输入文章题目(16个字以内)" maxlength="16">
 		<button type="button" onclick="submit()" class="submitBtn">提交</button>
-		<form>
-			<textarea id="my-editor" cols="20" rows="10" class="ckeditor"></textarea>
+		<form id="myform" name="myform" method="post" action="" >
+			<textarea id="content" name="content" cols="20" rows="10" class="ckeditor"></textarea>
 		</form>
 	</div>
 	<script type="text/javascript" src="../js/jquery.min.js"></script>
-	<script type="text/javascript">
-		CKEDITOR.replace('my-editor')
-		function submit(){
-			//
-		}
-	</script>
+    <script type="text/javascript" src="../js/write.js"></script>	
 </body>
 </html>
