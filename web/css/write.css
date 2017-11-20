@@ -4,7 +4,7 @@
 	left: 0;
 	width: 100%;
 	height: 60px;
-	background-color: #4CAF50;
+	background-color: rgb(102, 204, 102);
 	border-bottom: 1px solid #ccc;
 	color: #fff;
 	z-index: 100;
@@ -24,7 +24,7 @@
 	margin-top: 80px;
 	position: relative;
 }
-.editor input{margin-bottom: 20px;width: 50%;height: 50px;border:none;border-bottom: 1px solid #000;font-size: 20px;}
+.editor input{margin-bottom: 20px;width: 50%;height: 50px;border:none;border-bottom: 1px solid rgba(0, 0, 0, 0.25);font-size: 20px;}
 .editor button{
 	width: 80px;
 	height: 30px;
@@ -37,4 +37,5 @@
 	position: absolute;
 	top: 0;
 	right: 0;
+	cursor: pointer;
 }

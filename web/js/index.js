@@ -15,10 +15,10 @@ $(document).ready(function(){
           $('.list-wrap').append(
         '<li class="list-box">' +
           '<div class="content">'+
-             '<div class="author">'+data.articles[x].username+
-             '</div><div class="article_title">'+data.articles[x].title+'</div>'+
-              '<div class="abstract">'+data.articles[x].content+'</div>'+
-              '<div class="bottom">'+data.articles[x].createdate+'  '+data.articles[x].views+'</div>'+
+             '<div><a class="author">'+data.articles[x].username+
+             '</a></div><div class=""><a class="article_title">'+data.articles[x].title+'</a></div>'+
+              '<div class=""><p class="abstract">'+data.articles[x].content+'</p></div>'+
+              '<div class="bottom"><a class="date">'+data.articles[x].createdate+'</a><a class="views">'+data.articles[x].views+'</a></div>'+
           '</div>'+
         '</li>')
         }
@@ -42,10 +42,10 @@ $(window).scroll(function(){
                       $('.list-wrap').append(
                     '<li class="list-box">' +
                       '<div class="content">'+
-                         '<div class="author">'+data.articles[x].username+
-                         '</div><div class="article_title">'+data.articles[x].title+'</div>'+
-                          '<div class="abstract">'+data.articles[x].content+'</div>'+
-                          '<div class="bottom">'+data.articles[x].createdate+'  '+data.articles[x].views+'</div>'+
+                         '<div><a class="author">'+data.articles[x].username+
+                         '</a></div><div class=""><a class="article_title">'+data.articles[x].title+'</a></div>'+
+                          '<div class=""><p class="abstract">'+data.articles[x].content+'</p></div>'+
+                          '<div class="bottom"><a class="date">'+data.articles[x].createdate+'</a><a class="views">'+data.articles[x].views+'</a></div>'+
                       '</div>'+
                     '</li>')
                     }
