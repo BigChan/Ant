@@ -1,5 +1,5 @@
 
-     var userId = document.cookie.split(';')[0]
+     var userId = getCookie('username')
         var name_check = /^1[34578]\d{9}$/.test(userId);
     if(name_check){
         $('.userName').text(userId)
@@ -20,12 +20,21 @@ if(editor_data==null||editor_data==""||article_title==''){
       alert('提交失败'+XMLHttpRequest.status+textStatus)
     },
     success:function(data){
-        var newdate = JSON.parse(data)
-         if(newdate.code == '1'){
-            alert('提交成功')
+         if(data.code == '1'){
+            alert(data.message)
          }
        }
     
 })
 }  
+}
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) != -1) return c.substring(name.length, c.length);
+    }
+    return "";
 }
