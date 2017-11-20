@@ -11,9 +11,9 @@
     <link rel="stylesheet" type="text/css" href="../css/base.css">
 </head>
 <body class="whiteBg">
-	<header class="header">
-		<div class="container">
-			<div class="title">
+	<header class="header" >
+		<div class="container" >
+			<div class="title" >
 				<p>码蚁</p>
 			</div>
 			<div class="middle">
@@ -59,7 +59,7 @@
 							<a href="user.html">用户中心</a>
 						</li>
 						<li>
-							<a href="" onclick="clearCookie()">退出登录</a>
+							<a href="" onclick="setCookie('username','')">退出登录</a>
 						</li>
 					</ul>
 				</div>
@@ -93,23 +93,20 @@
 		</div>
 		<!-- 文章列表 -->
 		<div class="list-container">
+			<h1>最近热门</h1>
 			<ul class="list-wrap">
-				<li class="list-box">
-					<a href=""><img src="" class="list-img" /></a>
-					<div class="content">
-						<div class="author"></div>
-						<div class="title"></div>
-						<div class="abstract"></div>
-						<div class="bottom"></div>
-					</div>
-				</li>
+				
 			</ul>
 		</div>
 	</div>
+	<aside>
+		<a class="side-tool" href="javascript:scroll(0,0)">&#8679</a>
+	</aside>
 <script type="text/javascript" src="../js/swiper.min.js"></script>
 <script type="text/javascript" src="../js/jquery.min.js"></script>
 <script type="text/javascript" src="../js/index.js"></script>
 <script type="text/javascript">
+  
 	var swiper_news = new Swiper('.swiperBox .swiper-container', {
         pagination: '.swiperBox .swiper-pagination',
 		autoplay: 3000,

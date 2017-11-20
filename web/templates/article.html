@@ -5,18 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>码蚁 - 汇聚文字的力量</title>
-    <link rel="stylesheet" type="text/css" href="../css/base.css">
     <link rel="stylesheet" type="text/css" href="../css/write.css">
-    <script type="text/javascript" src="../js/ckeditor/ckeditor.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <link rel="stylesheet" type="text/css" href="../css/article.css">
 </head>
 <body>
-	<header class="header">
+	<header class="header" id="header">
 		<div class="container">
 			<div class="title">
 				<a href="index.html"><p>码蚁</p></a>
-			</div>
-			<div class="mid-title">
-				码您所意
 			</div>
 			<div class="userMsg">
 				<div class="headimg">
@@ -26,14 +23,20 @@
 			</div>
 		</div>
 	</header>
-	<div class="editor">
-		<input id="article_title" type="text" name="article_title" placeholder="请输入文章题目(25个字以内)" maxlength="25">
-		<button type="button" onclick="submit()" class="submitBtn">提交</button>
-		<form id="myform" name="myform" method="post" action="" >
-			<textarea id="content" name="content" cols="20" rows="10" class="ckeditor"></textarea>
-		</form>
-	</div>
+	<section>
+       <div class="search_result">
+            <h1 class="article-title"></h1>
+            <a class="author"></a>
+            <div class="info">
+                <a class="date"></a>                                
+                <a class="views"></a>                                
+            </div>
+       </div>
+    </section>
+    <aside>
+            <a class="side-tool" href="javascript:scroll(0,0)">&#8679</a>
+    </aside>
 	<script type="text/javascript" src="../js/jquery.min.js"></script>
-    <script type="text/javascript" src="../js/write.js"></script>	
+    <script type="text/javascript" src="../js/article.js"></script>	
 </body>
 </html>

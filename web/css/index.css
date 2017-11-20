@@ -50,7 +50,7 @@
 
 /* 换肤 */
 .skin:hover, .headimg:hover{cursor: pointer;}
-.skinList{width: 300px;height: 100px;position: absolute;top: 40px;left:-250px;background-color: #C4E1FF;padding-top: 10px}
+.skinList{width: 300px;height: 100px;position: absolute;top: 40px;left:-250px;background-color: #C4E1FF;padding-top: 10px;border-radius: 25px;}
 .skinList:before, .skinList:after, .dropdown-menu:before, .dropdown-menu:after{
 	position: absolute;
     top: -10px;
@@ -94,6 +94,55 @@
 	line-height: 30px;
 }
 /* 列表样式 */
+.list-container{
+	width: 50%;
+	margin: 0 auto;
+}
 .list-box{
-	
+	border-bottom: 1px solid #f0f0f0;
+	margin-bottom: 25px; 
+}
+.list-box .content>div{
+	margin: 10px 0;
+}
+.list-container>h1{
+	background: rgba(76, 175, 80, 0.74);
+    color: white;
+    width: 27%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+.date::before{
+   content: '发表时间 '
+}
+.views::before{
+	content: '　　阅读次数 '
+ }
+.author{
+	color: #2f2f2f;
+}
+.article_title{
+	color: #333;
+    font-size: 18px;
+    font-weight: 700;
+	line-height: 1.5;
+}
+.article_title:hover{
+	text-decoration: underline;
+}
+.article_title:visited{
+	color: #969696;
+}
+.abstract{
+	font-size: 13px;
+    line-height: 24px;
+    color: #333;
+}
+.date,.views{
+	  color: #b4b4b4;
+	  font-size: 12px;
+	  font-weight: 400;
+	  line-height: 20px;
+	  cursor: inherit;
 }

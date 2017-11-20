@@ -13,9 +13,8 @@ function check_login(){
                alert(data.message);
                if(data.code == '1'){
                 $("#user_name").val("");
-                $("#password").val("");       
-                document.cookie = name;
-                console.log(document.cookie)
+                $("#password").val("");      
+                setCookie('username',name)
                  window.location.assign("index.html")
                }
             }
@@ -102,3 +101,10 @@ document.title = document.title =='码蚁——登录'?'码蚁——注册':'码
     }, 'slow');   
     document.title = document.title =='码蚁——登录'?'码蚁——注册':'码蚁——登录';
 });
+
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + "; " + expires;
+}
