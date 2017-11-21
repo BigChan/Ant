@@ -79,7 +79,7 @@
 .userMsg{position: absolute;left: 25%;top:10px;font-size: 16px;}
 .userMsg .headimg{border-radius: 100%;width: 45px;height: 45px;}
 .userMsg .headimg img{width: 100%;height: 100%;}
-.userMsg p{font-size: 14px;position: absolute;top: 20px;left: 60px;width: 100%}
+.userMsg p{font-size: 14px;position: absolute;top: 15px;left: 45px;width: 100%}
 /* 下拉列表 */
 .dropdown-menu{
 	position: absolute;
@@ -116,6 +116,9 @@
 .date::before{
    content: '发表时间 '
 }
+.author::before{
+	content: '作者  '
+ }
 .views::before{
 	content: '　　阅读次数 '
  }
@@ -139,7 +142,7 @@
     line-height: 24px;
     color: #333;
 }
-.date,.views{
+.date,.views,.author::before{
 	  color: #b4b4b4;
 	  font-size: 12px;
 	  font-weight: 400;

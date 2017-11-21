@@ -124,12 +124,13 @@
     $('.skin').on('click',function(){
     	$('.skinList').fadeToggle()
     })
-    $('.userMsg').on({mouseenter:function(){
+    $('.userMsg').on('click',function(){
 		$('.dropdown-menu').fadeIn();
-	},
-	    mouseleave:function(){
+	})
+	$('.dropdown-menu').on('mouseleave',function(){
 		$('.dropdown-menu').fadeOut()	
-	}})
+	})
+	    
     //修改背景色
     function changeBg(type){
     	if(type == 0){//白色，默认

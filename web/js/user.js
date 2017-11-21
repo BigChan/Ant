@@ -26,8 +26,8 @@ function save_setting(){
     var introduction = $('#description').text();
     var website = $('#site').val();
     $.ajax({
-        url:"http://192.168.0.1:8080/getUserInfo",
-        data:{"penName":penName,'email':email,'sex':sex,'introduction':introduction,'website':website},
+        url:"http://192.168.0.1:8080/updateUserInfo",
+        data:{"username":userId,"penname":penName,"email":email,"sex":sex,"introduction":introduction,"website":website},
         dataType:'json',
         // error:function(XMLHttpRequest, textStatus, errorThrown){
         //     alert(XMLHttpRequest.status+textStatus+XMLHttpRequest.readyState)
