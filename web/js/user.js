@@ -52,7 +52,7 @@ $.ajax({
             for(x in data.articles){
                 $('.article').append('<tr><td class="list-box">' +
                 '<div class="content">'+
-                   '</a></div><div class=""><a class="article_title" href="article.html?id='+data.articles[x].id+ '"  target="_blank">'+data.articles[x].title+'</a></div>'+
+                   '<div class=""><a class="article_title" href="article.html?id='+data.articles[x].id+ '"  target="_blank">'+data.articles[x].title+'</a></div>'+
                     '<div class="bottom"><a class="date">'+data.articles[x].createdate+'</a><a class="views">'+data.articles[x].views+'</a></div>'+
                 '</div>'+
               '</td></tr>')   

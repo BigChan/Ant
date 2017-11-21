@@ -2,6 +2,9 @@
     width: 60%;
     margin: 85px auto 0;
 }
+.list-box .content>div {
+    margin: 5px 0;
+}
 .user_center .left_part{
     list-style: none;
     position: fixed;
@@ -89,4 +92,7 @@ cursor: pointer;
 }
 .user_center .right_part tr:first-child td{
     padding-top: 0;
+}
+.user_center .right_part .article td {
+    padding: 5px 0;
 }

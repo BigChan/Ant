@@ -32,7 +32,7 @@
         <ul class="left_part">
             <li class="active">基础设置</li>
             <li>个人资料</li>
-            <li>发布过的文章</li>            
+            <li>我的文章</li>            
         </ul>
         <div class="right_part">
              <table class="active">
@@ -92,8 +92,13 @@
                     <thead>
                       <th style="font-size:30px;padding-bottom:20px;">文章</th>
                     </thead>
-                    <tbody class="article">
-                       
+                    <tbody class="article">  
+                            <tr><td class="list-box">
+                                    <div class="content">
+                                       <div class=""><a class="article_title" href="article.html?id='+data.articles[x].id+ '"  target="_blank">这是题目</a></div>
+                                        <div class="bottom"><a class="date">2017-11-21 16:42</a><a class="views">0</a></div>
+                                    </div>
+                            </td></tr>                    
                     </tbody>
                 </table>
                 <input type="submit" class="btn setting_save" value="保存" onclick="save_setting()">
