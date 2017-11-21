@@ -146,3 +146,6 @@
 	  line-height: 20px;
 	  cursor: inherit;
 }
+.search{
+	cursor: pointer;
+}

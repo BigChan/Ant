@@ -56,6 +56,24 @@ $(window).scroll(function(){
         } 
     } 
 });
+
+
+    $('.search_input').on('keypress',function(e){
+        if(event.keyCode == '13'){
+            search()
+        }     
+    })
+    $('.search').on('click',function(){
+        search()
+    })
+
+function search(){
+    var search_key = $('.search_input').val()
+    if(search_key != ''){
+        window.open('search_result.html?key='+search_key)        
+    }
+}
+
 //获取cookie
 function getCookie(cname) {
     var name = cname + "=";

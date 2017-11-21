@@ -18,6 +18,28 @@
         } 
     }
 })
+
+function save_setting(){
+    var penName = $('#penName').val();
+    var email = $('#mail').val();
+    var sex = $('input[name="sex"]:checked').prop('value');
+    var introduction = $('#description').text();
+    var website = $('#site').val();
+    $.ajax({
+        url:"http://192.168.155.4:8080/getUserInfo",
+        data:{"penName":penName,'email':email,'sex':sex,'introduction':introduction,'website':website},
+        dataType:'json',
+        // error:function(XMLHttpRequest, textStatus, errorThrown){
+        //     alert(XMLHttpRequest.status+textStatus+XMLHttpRequest.readyState)
+        //   },
+        success:function(data){
+            if(data.code == '1'){
+               alert(data.message)     
+            } 
+        }
+    })        
+}
+
 $.ajax({
     url:"http://192.168.155.4:8080/getMyArticles",
     data:{"username":userId},
@@ -47,7 +69,21 @@ $('.left_part li').click(function(){
     $('.right_part table').eq(index).addClass('active')
     $('.right_part table').eq(index).siblings().removeClass('active')
 })
+$('.search_input').on('keypress',function(event){
+    if(event.keyCode == '13'){
+        search()
+    }     
+})
+$('.search').on('click',function(){
+    search()
+})
 
+function search(){
+    var search_key = $('.search_input').val()
+    if(search_key != ''){
+        window.open('search_result.html?key='+search_key)        
+    }
+}
 $('#img_file').change(function(){
     loadImg();
  })

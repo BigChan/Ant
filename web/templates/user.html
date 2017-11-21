@@ -18,7 +18,7 @@
 			</div>
 			<div class="middle">
 				<p class="index-page"><a href="index.html">首页</a></p>
-				<input type="text" placeholder="搜索" style="width: 25%;height: 30px" />
+				<input type="text" placeholder="搜索" style="width: 25%;height: 30px" class="search_input"/>
 				<img src="../img/search.png" class="search">
 			</div>
 			<div class="tail">
@@ -69,8 +69,8 @@
                                性别
                            </td>
                            <td>
-                              <label><input type="radio" name="sex" value='1'/>男</label>
-                              <label><input type="radio" name="sex" value='0'/>女</label>
+                              <label><input type="radio" name="sex" value='0'/>男</label>
+                              <label><input type="radio" name="sex" value='1'/>女</label>
                               <label><input type="radio" name="sex" value='2'/>保密</label>
                            </td>
                        </tr>
@@ -96,7 +96,7 @@
                        
                     </tbody>
                 </table>
-                <input type="submit" class="btn setting_save" value="保存">
+                <input type="submit" class="btn setting_save" value="保存" onclick="save_setting()">
         </div>
     </div>
     <script src="../js/user.js"></script>        
