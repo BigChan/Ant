@@ -5,19 +5,24 @@
 
 <!--目的：为dao接口方法提供sql语句配置-->
 <mapper namespace="com.ant.dao.ArticleDao">
-    <select id="getArticleByTitle" resultType="com.ant.entity.Article">
-        SELECT * FROM article WHERE title = #{title}
-    </select>
+
     <select id="getArticleById" resultType="com.ant.entity.Article">
         SELECT * FROM article WHERE id = #{id}
     </select>
-    <insert id="saveArticle">
-        INSERT INTO article VALUES (NULL ,#{user_id},0,#{create_date},#{title},#{content})
+
+    <insert id="saveArticle" useGeneratedKeys="true" keyProperty="id" parameterType="com.ant.entity.Article">
+        INSERT INTO article VALUES (NULL ,#{username},#{views},#{createDate},#{title},#{content})
     </insert>
-    <delete id="deleteArticleById">
-        DELETE FROM article where id = #{id}
-    </delete>
-    <update id="updateArticle">
-        UPDATE article SET viewed = 0,create_date =#{create_date},title = #{title},content = #{content} WHERE id = #{id}
-    </update>
+
+    <select id="getRecommendArticles" resultType="com.ant.entity.Article" parameterType="Integer">
+        SELECT * FROM article  order by createdate desc limit #{start},5
+    </select>
+
+    <select id="getMyArticles" resultType="com.ant.entity.Article" parameterType="String">
+        SELECT id,username,title,views,createdate FROM article where username = #{username}
+    </select>
+
+    <select id="searchArticles" resultType="com.ant.entity.Article" parameterType="String">
+        SELECT * FROM article where title LIKE concat('%',#{key},'%')
+    </select>
 </mapper>

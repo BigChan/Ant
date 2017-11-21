@@ -12,6 +12,6 @@
         SELECT user.username FROM user WHERE username = #{username}
     </select>
     <insert id="saveUser">
-        INSERT INTO user VALUES (NULL ,#{username},#{password},#{email})
+        INSERT INTO user VALUES (NULL ,#{username},#{password},#{email},null,null,null,2,null)
     </insert>
 </mapper>

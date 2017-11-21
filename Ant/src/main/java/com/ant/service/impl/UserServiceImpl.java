@@ -26,12 +26,12 @@ public class UserServiceImpl implements UserService {
     public String loginUser(String username, String password) {
         User user = userDao.getUserByUsernameAndPassword(username, password);
         Map<String, Object> map = new HashMap<>();
-        if (user != null) {
-            map.put("code", 1);
-            map.put("message", "登录成功");
-        } else {
+        if (user == null) {
             map.put("code", 0);
             map.put("message", "账号或密码不正确");
+        } else {
+            map.put("code", 1);
+            map.put("message", "登录成功");
         }
         return JsonUtils.toJsonString(map);
     }

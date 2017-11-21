@@ -7,53 +7,69 @@ import java.util.Date;
  * Created by ChenZhaoqiang.
  */
 public class Article {
+
     private int id;
-    private int user_id;
-    private int viewed;
-    private Date create_date;
+    private String username;
+    private int views;
+    private Date createDate;
     private String title;
     private String content;
 
     public int getId() {
         return id;
     }
-    public void setId(int id){
+
+    public void setId(int id) {
         this.id = id;
     }
 
-    public int getUserId(){
-        return user_id;
-    }
-    public void setUserId(int user_id){
-        this.user_id = user_id;
+    public String getUsername() {
+        return username;
     }
 
-    public int getViewed(){
-        return viewed;
+    public void setUsername(String username) {
+        this.username = username;
     }
-    public void setViewed(int viewed) {
-        this.viewed = viewed;
+
+    public int getViews() {
+        return views;
+    }
+
+    public void setViews(int views) {
+        this.views = views;
     }
 
     public Date getCreateDate() {
-        return create_date;
+        return createDate;
     }
 
-    public void setCreateDate(Date create_date) {
-        this.create_date = create_date;
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
     }
 
     public String getTitle() {
         return title;
     }
-    public void setTitle(String title){
+
+    public void setTitle(String title) {
         this.title = title;
     }
 
     public String getContent() {
         return content;
     }
+
     public void setContent(String content) {
         this.content = content;
+    }
+
+    @Override
+    public String toString() {
+        return "id:" + getId() + "\n" +
+                "username:" + getUsername() + "\n" +
+                "views:" + getViews() + "\n" +
+                "createdate:" + getCreateDate().toString() + "\n" +
+                "title:" + getTitle() + "\n" +
+                "content:" + getContent() + "\n";
     }
 }
