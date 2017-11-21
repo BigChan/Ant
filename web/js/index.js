@@ -8,7 +8,7 @@ $(document).ready(function(){
       $('.userMsg .userName').text(userId)
   }
   $.ajax({
-    url:"http://192.168.155.4:8080/recommendArticles",        
+    url:"http://192.168.0.1:8080/recommendArticles",        
     data:{'start':start},
     success:function(data){
         for(x in data.articles){
@@ -35,7 +35,7 @@ $(window).scroll(function(){
         if(stop==true){ 
             stop=false; 
             $.ajax({
-                url:"http://192.168.155.4:8080/recommendArticles",        
+                url:"http://192.168.0.1:8080/recommendArticles",        
                 data:{'start':start},
                 success:function(data){
                     for(x in data.articles){

@@ -5,7 +5,7 @@ $('.userName').text(userId)
 }
 var id = location.search.split('=')[1]
 $.ajax({
-    url:"http://192.168.155.4:8080/getArticleById",        
+    url:"http://192.168.0.1:8080/getArticleById",        
     data:{'id':id},
     // error:function(XMLHttpRequest, textStatus, errorThrown){
     //   alert('提交失败'+XMLHttpRequest.status+textStatus)

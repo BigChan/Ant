@@ -6,7 +6,7 @@ $('.userName').text(userId)
 var key = location.search.split('=')[1]
 key = decodeURI(key)
 $.ajax({
-    url:"http://192.168.155.4:8080/searchArticles",        
+    url:"http://192.168.0.1:8080/searchArticles",        
     data:{'key':key},
     success:function(data){
         for(x in data.articles){

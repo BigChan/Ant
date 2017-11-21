@@ -2,7 +2,7 @@
 
  var userId = getCookie('username')
  $.ajax({
-    url:"http://192.168.155.4:8080/getUserInfo",
+    url:"http://192.168.0.1:8080/getUserInfo",
     data:{"username":userId},
     dataType:'json',
     // error:function(XMLHttpRequest, textStatus, errorThrown){
@@ -26,7 +26,7 @@ function save_setting(){
     var introduction = $('#description').text();
     var website = $('#site').val();
     $.ajax({
-        url:"http://192.168.155.4:8080/getUserInfo",
+        url:"http://192.168.0.1:8080/getUserInfo",
         data:{"penName":penName,'email':email,'sex':sex,'introduction':introduction,'website':website},
         dataType:'json',
         // error:function(XMLHttpRequest, textStatus, errorThrown){
@@ -41,7 +41,7 @@ function save_setting(){
 }
 
 $.ajax({
-    url:"http://192.168.155.4:8080/getMyArticles",
+    url:"http://192.168.0.1:8080/getMyArticles",
     data:{"username":userId},
     dataType:'json',
     // error:function(XMLHttpRequest, textStatus, errorThrown){
@@ -52,7 +52,7 @@ $.ajax({
             for(x in data.articles){
                 $('.article').append('<tr><td class="list-box">' +
                 '<div class="content">'+
-                   '<div class=""><a class="article_title" href="article.html?id='+data.articles[x].id+ '"  target="_blank">'+data.articles[x].title+'</a></div>'+
+                   '<div class=""><a class="article_title" href="article.html?id='+data.articles[x].id+'"  target="_blank">'+data.articles[x].title+'</a></div>'+
                     '<div class="bottom"><a class="date">'+data.articles[x].createdate+'</a><a class="views">'+data.articles[x].views+'</a></div>'+
                 '</div>'+
               '</td></tr>')   

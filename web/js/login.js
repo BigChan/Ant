@@ -4,7 +4,7 @@ function check_login(){
     var pass=$("#password").val();
     if(/^1[34578]\d{9}$/.test(name)&& /^.{6,10}$/.test(pass)){ 
         $.ajax({
-            url:"http://192.168.155.4:8080/login",        
+            url:"http://192.168.0.1:8080/login",        
             data:{"username":name,"password":pass},
             error:function(XMLHttpRequest, textStatus, errorThrown){
               alert('登录失败'+XMLHttpRequest.status+textStatus)
@@ -41,7 +41,7 @@ function check_login(){
      if(name_check && email_check &&pass_check &&(pass === repass) )
       {
         $.ajax({
-        url:"http://192.168.155.4:8080/register",
+        url:"http://192.168.0.1:8080/register",
         data:{"username":name,"password":pass,"email":email},
         error:function(XMLHttpRequest, textStatus, errorThrown){
           alert('注册失败'+XMLHttpRequest.status+textStatus)
