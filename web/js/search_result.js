@@ -4,6 +4,7 @@ if(name_check){
 $('.userName').text(userId)
 }
 var key = location.search.split('=')[1]
+key = decodeURI(key)
 $.ajax({
     url:"http://192.168.155.4:8080/searchArticles",        
     data:{'key':key},
@@ -20,8 +21,7 @@ $.ajax({
         }
        }   
    })
-
-
+   $('.search_key span').text(key)
 //获取cookie
 function getCookie(cname) {
     var name = cname + "=";
