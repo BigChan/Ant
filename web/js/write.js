@@ -14,7 +14,7 @@ if(editor_data==null||editor_data==""||article_title==''){
 }else{               
     // document.myform.submit()
     $.ajax({
-    url:"http://192.168.155.4:8080/saveArticle",        
+    url:"http://192.168.0.1:8080/saveArticle",        
     data:{'content':editor_data,'title':article_title,'username':userId},
     error:function(XMLHttpRequest, textStatus, errorThrown){
       alert('提交失败'+XMLHttpRequest.status+textStatus)

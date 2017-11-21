@@ -1,4 +1,4 @@
-var stop=true,start = 1; 
+var stop=true,start = 0; 
 $(document).ready(function(){
   var userId = getCookie('username')
   var name_check = /^1[34578]\d{9}$/.test(userId);
@@ -8,22 +8,24 @@ $(document).ready(function(){
       $('.userMsg .userName').text(userId)
   }
   $.ajax({
-    url:"http://192.168.155.4:8080/recommendArticles",        
+    url:"http://192.168.0.1:8080/recommendArticles",        
     data:{'start':start},
     success:function(data){
         for(x in data.articles){
+            var abstract=data.articles[x].content.replace(/<\/?.+?>/g,"");
+            var newabstract=abstract.replace(/ /g,"");
           $('.list-wrap').append(
         '<li class="list-box">' +
           '<div class="content">'+
              '<div><a class="author">'+data.articles[x].username+
              '</a></div><div class=""><a class="article_title" href="article.html?id='+data.articles[x].id+ '"  target="_blank">'+data.articles[x].title+'</a></div>'+
-              '<div class=""><p class="abstract">'+data.articles[x].content+'</p></div>'+
+              '<div class=""><p class="abstract">'+newabstract+'</p></div>'+
               '<div class="bottom"><a class="date">'+data.articles[x].createdate+'</a><a class="views">'+data.articles[x].views+'</a></div>'+
           '</div>'+
         '</li>')
         }
         stop=true;
-        start +=10; 
+        start +=5; 
        }   
    })
   
@@ -35,22 +37,24 @@ $(window).scroll(function(){
         if(stop==true){ 
             stop=false; 
             $.ajax({
-                url:"http://192.168.155.4:8080/recommendArticles",        
+                url:"http://192.168.0.1:8080/recommendArticles",        
                 data:{'start':start},
                 success:function(data){
                     for(x in data.articles){
+                        var abstract=data.articles[x].content.replace(/<\/?.+?>/g,"");
+                        var newabstract=abstract.replace(/ /g,"");
                       $('.list-wrap').append(
                     '<li class="list-box">' +
                       '<div class="content">'+
                          '<div><a class="author">'+data.articles[x].username+
                          '</a></div><div class=""><a class="article_title" href="article.html?id='+data.articles[x].id+ '" target="_blank">'+data.articles[x].title+'</a></div>'+
-                          '<div class=""><p class="abstract">'+data.articles[x].content+'</p></div>'+
+                          '<div class=""><p class="abstract">'+newabstract+'</p></div>'+
                           '<div class="bottom"><a class="date">'+data.articles[x].createdate+'</a><a class="views">'+data.articles[x].views+'</a></div>'+
                       '</div>'+
                     '</li>')
                     }
                     stop=true;
-                    start +=10; 
+                    start +=5; 
                    }   
                })
         } 
